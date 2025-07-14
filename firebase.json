@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/dates-gym",
+    "public": "dist/dates-gym/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
