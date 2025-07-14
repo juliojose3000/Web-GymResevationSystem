@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dates-gym:build"
+            "buildTarget": "dates-gym:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dates-gym:build:production"
+              "buildTarget": "dates-gym:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dates-gym:build"
+            "buildTarget": "dates-gym:build"
           }
         },
         "test": {
