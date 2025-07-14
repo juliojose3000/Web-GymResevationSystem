@@ -6,13 +6,17 @@ import { UserRoleEnum } from '../../model/enums/user-role.enum';
 import { PopupComponent } from '../popup/popup.component';
 import { Codes, Strings } from '../../utils/resources';
 import { Utils } from '../../utils/utils';
-import { SocialAuthService } from 'angularx-social-login';
-
+import { CommonModule } from '@angular/common';
+import { SocialAuthService } from '@abacritt/angularx-social-login';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [
+      CommonModule
+    ]
 })
 export class HeaderComponent implements OnInit {
 

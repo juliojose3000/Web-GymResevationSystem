@@ -13,11 +13,21 @@ import { Utils } from '../../../utils/utils';
 import { DatePipe } from '@angular/common';
 import { environment } from 'src/environments/environment';
 import { MessageComponent } from 'src/app/common/message/message.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'enter-phone-number-popup.component',
-  templateUrl: './enter-phone-number-popup.component.html',
-  styleUrls: ['./enter-phone-number-popup.component.scss'],
+    selector: 'enter-phone-number-popup.component',
+    templateUrl: './enter-phone-number-popup.component.html',
+    styleUrls: ['./enter-phone-number-popup.component.scss'],
+    standalone: true,
+    imports: [
+      CommonModule,
+      FormsModule, // ✅ NECESARIO PARA [(ngModel)]
+      MatDialogModule,
+      MessageComponent
+    ]
 })
 export class EnterPhoneNumberPopupComponent implements OnInit {
   phone: number;

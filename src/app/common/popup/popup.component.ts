@@ -2,11 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'popup-component',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss']
+    selector: 'popup-component',
+    templateUrl: './popup.component.html',
+    styleUrls: ['./popup.component.scss'],
+    standalone: true,
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+    ]
 })
 export class PopupComponent implements OnInit {
 

@@ -4,17 +4,22 @@
   <h3>Horario: {{ utils.formatAMPM(startHour) }} - {{ utils.formatAMPM(endHour) }}</h3>
   <div mat-dialog-content>
 
-    <table id="customers" *ngIf="clients.length > 0">
-      <th>Cliente</th>
-      <th>Teléfono</th>
-      <tr *ngFor="let client of clients">
-        <td>{{client.name}}</td>
-        <td>{{client.phoneNumber}}</td>
-      </tr>
+    @if (clients.length > 0) {
+      <table id="customers">
+        <th>Cliente</th>
+        <th>Teléfono</th>
+        @for (client of clients; track client) {
+          <tr>
+            <td>{{client.name}}</td>
+            <td>{{client.phoneNumber}}</td>
+          </tr>
+        }
+      </table>
+    }
 
-    </table>
-
-    <p id="labelNoReservation" *ngIf="clients.length == 0">** No hay reservaciones **</p>
+    @if (clients.length == 0) {
+      <p id="labelNoReservation">** No hay reservaciones **</p>
+    }
 
   </div>
   <div mat-dialog-actions>

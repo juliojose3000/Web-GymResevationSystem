@@ -9,7 +9,7 @@ import { MyResponse } from '../model/myresponse.model';
 import { Shift } from '../model/shift.model';
 import { User } from '../model/user.model';
 import { ASSETS, DAYS_NAME, MONTHS_NAME, Strings } from './resources';
-import * as $ from 'jquery'; //in the component
+import $ from 'jquery'; //in the component
 
 @Injectable()
 export class Utils {
@@ -65,11 +65,23 @@ export class Utils {
     });
   }
 
-  dateFormat(date: Date) {
-    var dateFormatted = this.datepipe
-      .transform(date, 'E dd MMM yyyy')
-      .split(' ');
-    var dayNumber = Number(dateFormatted[1]);
+  dateFormat(date: string | Date): string {
+    const parsedDate = typeof date === 'string' ? new Date(date) : date;
+
+    if (isNaN(parsedDate.getTime())) {
+      return 'Fecha inválida';
+    }
+
+    const dateFormatted = this.datepipe
+      .transform(parsedDate, 'E dd MMM yyyy')
+      ?.split(' ');
+
+    if (!dateFormatted || dateFormatted.length < 3) {
+      return 'Fecha inválida';
+    }
+
+    const dayNumber = Number(dateFormatted[1]);
+
     return `${DAYS_NAME[dateFormatted[0]]} ${dayNumber} de ${
       MONTHS_NAME[dateFormatted[2]]
     }`;

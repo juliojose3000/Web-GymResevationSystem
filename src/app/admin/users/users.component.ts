@@ -9,11 +9,22 @@ import { SpinnerService } from 'src/app/common/spinner/spinner.service';
 import { Utils } from 'src/app/utils/utils';
 import { SeeUserReservationsModal } from './see-user-reservations-modal/see-user-reservations.modal.component';
 import { EnableDisableUserModal } from './enable-disable-user-modal/enable-disable-user.modal.component';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+    selector: 'app-users',
+    standalone: true,
+    imports: [
+      CommonModule,
+      FormsModule,
+      MatButtonModule,
+      MatDialogModule
+    ],
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
 

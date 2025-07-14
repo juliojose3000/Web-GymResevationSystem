@@ -1,5 +1,4 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MessageComponent } from '../../common/message/message.component';
@@ -9,11 +8,14 @@ import { ASSETS, Strings } from '../../utils/resources';
 import { UserService } from '../../service/user.service';
 import { SpinnerService } from '../../common/spinner/spinner.service';
 import { Utils } from '../../utils/utils';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-password-forgotten',
-  templateUrl: './password-forgotten.component.html',
-  styleUrls: ['./password-forgotten.component.scss']
+    selector: 'app-password-forgotten',
+    templateUrl: './password-forgotten.component.html',
+    styleUrls: ['./password-forgotten.component.scss'],
+    standalone: true,
+    imports: [FormsModule]
 })
 export class PasswordForgottenComponent implements OnInit {
 

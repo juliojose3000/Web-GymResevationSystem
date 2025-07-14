@@ -21,7 +21,7 @@ import { SeeUserReservationsModal } from './users/see-user-reservations-modal/se
 
 
 @NgModule({
-  declarations: [UsersComponent, ScheduleComponent, EnableUserAccountComponent, ModalComponent, SeeUserReservationsModal, EnableDisableUserModal],
+  declarations: [],
   imports: [
     CommonModule,
     AdminRoutingModule,

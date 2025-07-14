@@ -9,88 +9,90 @@
 
   <table>
     <!--<tr id="headers_pc" class="top_headers">
-            <th>Horario:</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-        </tr>-->
+    <th>Horario:</th>
+    <th>Lunes</th>
+    <th>Martes</th>
+    <th>Miércoles</th>
+    <th>Jueves</th>
+    <th>Viernes</th>
+    <th>Sábado</th>
+    <th>Domingo</th>
+  </tr>-->
 
-    <tr id="amountOfAvailableSpacesLabel" class="top_headers">
-      <th colspan="8">Cantidad de espacios disponibles:</th>
-    </tr>
+  <tr id="amountOfAvailableSpacesLabel" class="top_headers">
+    <th colspan="8">Cantidad de espacios disponibles:</th>
+  </tr>
 
-    <tr id="headers" class="top_headers">
-      <th>Horario:</th>
-      <th>Lun</th>
-      <th>Mar</th>
-      <th>Mié</th>
-      <th>Jue</th>
-      <th>Vie</th>
-      <th>Sáb</th>
-      <th>Dom</th>
-    </tr>
+  <tr id="headers" class="top_headers">
+    <th>Horario:</th>
+    <th>Lun</th>
+    <th>Mar</th>
+    <th>Mié</th>
+    <th>Jue</th>
+    <th>Vie</th>
+    <th>Sáb</th>
+    <th>Dom</th>
+  </tr>
 
-    <tbody>
-      <tr *ngFor="let column of arrayShiefts[0]; let in = index">
+  <tbody>
+    @for (column of arrayShiefts[0]; track column; let in = $index) {
+      <tr>
         <td class="headers">
           <p id="p_range_hours">{{ utils.formatAMPM(arrayShiefts[0][in].startHour) }} - {{
-            utils.formatAMPM(arrayShiefts[0][in].endHour) }}</p>
+          utils.formatAMPM(arrayShiefts[0][in].endHour) }}</p>
         </td>
         <td class="{{arrayShiefts[0][in].cssClass}}" id='{{arrayShiefts[0][in].date+"_"+arrayShiefts[0][in].startHour}}'
           (click)="openDialog(arrayShiefts[0][in].date, arrayShiefts[0][in].startHour, arrayShiefts[0][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[0][in].date+"_"+arrayShiefts[0][in].startHour}}'>
-            {{arrayShiefts[0][in].availableSpace}}</p>
+          {{arrayShiefts[0][in].availableSpace}}</p>
         </td>
         <td class="{{arrayShiefts[1][in].cssClass}}" id='{{arrayShiefts[1][in].date+"_"+arrayShiefts[1][in].startHour}}'
           (click)="openDialog(arrayShiefts[1][in].date, arrayShiefts[1][in].startHour, arrayShiefts[1][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[1][in].date+"_"+arrayShiefts[1][in].startHour}}'>
-            {{arrayShiefts[1][in].availableSpace}}</p>
+          {{arrayShiefts[1][in].availableSpace}}</p>
         </td>
         <td class="{{arrayShiefts[2][in].cssClass}}" id='{{arrayShiefts[2][in].date+"_"+arrayShiefts[2][in].startHour}}'
           (click)="openDialog(arrayShiefts[2][in].date, arrayShiefts[2][in].startHour, arrayShiefts[2][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[2][in].date+"_"+arrayShiefts[2][in].startHour}}'>
-            {{arrayShiefts[2][in].availableSpace}}</p>
+          {{arrayShiefts[2][in].availableSpace}}</p>
         </td>
         <td class="{{arrayShiefts[3][in].cssClass}}" id='{{arrayShiefts[3][in].date+"_"+arrayShiefts[3][in].startHour}}'
           (click)="openDialog(arrayShiefts[3][in].date, arrayShiefts[3][in].startHour, arrayShiefts[3][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[3][in].date+"_"+arrayShiefts[3][in].startHour}}'>
-            {{arrayShiefts[3][in].availableSpace}}</p>
+          {{arrayShiefts[3][in].availableSpace}}</p>
         </td>
         <td class="{{arrayShiefts[4][in].cssClass}}" id='{{arrayShiefts[4][in].date+"_"+arrayShiefts[4][in].startHour}}'
           (click)="openDialog(arrayShiefts[4][in].date, arrayShiefts[4][in].startHour, arrayShiefts[4][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[4][in].date+"_"+arrayShiefts[4][in].startHour}}'>
-            {{arrayShiefts[4][in].availableSpace}}</p>
+          {{arrayShiefts[4][in].availableSpace}}</p>
         </td>
         <td class="{{arrayShiefts[5][in].cssClass}}" id='{{arrayShiefts[5][in].date+"_"+arrayShiefts[5][in].startHour}}'
           (click)="openDialog(arrayShiefts[5][in].date, arrayShiefts[5][in].startHour, arrayShiefts[5][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[5][in].date+"_"+arrayShiefts[5][in].startHour}}'>
-            {{arrayShiefts[5][in].availableSpace}}</p>
+          {{arrayShiefts[5][in].availableSpace}}</p>
         </td>
         <td class="{{arrayShiefts[6][in].cssClass}}" id='{{arrayShiefts[6][in].date+"_"+arrayShiefts[6][in].startHour}}'
           (click)="openDialog(arrayShiefts[6][in].date, arrayShiefts[4][in].startHour, arrayShiefts[6][in].endHour)">
           <p class='p_available_space_text'>Campos disponibles: </p>
           <p class="p_available_space" id='p_{{arrayShiefts[6][in].date+"_"+arrayShiefts[6][in].startHour}}'>
-            {{arrayShiefts[6][in].availableSpace}}</p>
+          {{arrayShiefts[6][in].availableSpace}}</p>
         </td>
       </tr>
+    }
 
-    </tbody>
+  </tbody>
 
-  </table>
+</table>
 
-  <div class="divTextContainer" style="margin-top:10px;">
-    <p class="p_note">*NOTA: el horario de la próxima semana estará disponible a partir del {{endDateFormatted}}, a las 5
-      pm</p>
-  </div>
+<div class="divTextContainer" style="margin-top:10px;">
+  <p class="p_note">*NOTA: el horario de la próxima semana estará disponible a partir del {{endDateFormatted}}, a las 5
+  pm</p>
+</div>
 
 </div>

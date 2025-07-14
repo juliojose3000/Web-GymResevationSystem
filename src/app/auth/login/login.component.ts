@@ -14,21 +14,27 @@ import { SpinnerService } from '../../common/spinner/spinner.service';
 import { Utils } from '../../utils/utils';
 import { HeaderComponent } from '../../common/header/header.component';
 import { environment_variables } from 'src/environments/environment.variables';
-import {
-  FacebookLoginProvider,
-  GoogleLoginProvider,
-  SocialAuthService,
-  SocialUser,
-} from 'angularx-social-login';
+import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
 import { HttpErrorResponse } from '@angular/common/http';
 import { EnterPhoneNumberPopupComponent } from './enter-phone-number-popup/enter-phone-number-popup.component';
 import { Subscription } from 'rxjs';
 import { UserRoleEnum } from '../../model/enums/user-role.enum';
+import { SocialUser } from '@abacritt/angularx-social-login';
+import { SocialAuthService } from '@abacritt/angularx-social-login';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    standalone: true,
+    imports: [
+      FormsModule,
+      HeaderComponent,
+      EnterPhoneNumberPopupComponent,
+      MatIconModule
+    ] 
 })
 export class LoginComponent implements OnInit {
   //For Sign Up

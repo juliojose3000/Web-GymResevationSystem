@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { Utils } from '../../utils/utils';
 
 @Component({
-  selector: 'app-weight-room',
-  templateUrl: './weight-room.component.html',
-  styleUrls: ['./weight-room.component.scss']
+    selector: 'app-weight-room',
+    templateUrl: './weight-room.component.html',
+    styleUrls: ['./weight-room.component.scss'],
+    standalone: true
 })
 export class WeightRoomComponent implements OnInit {
 

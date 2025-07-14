@@ -9,11 +9,15 @@ import { AuthenticationService } from '../../service/authentication.service';
 import { UserService } from '../../service/user.service';
 import { SpinnerService } from '../../common/spinner/spinner.service';
 import { Utils } from '../../utils/utils';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'app-reset-password',
-  templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.scss']
+    selector: 'app-reset-password',
+    templateUrl: './reset-password.component.html',
+    styleUrls: ['./reset-password.component.scss'],
+    standalone: true,
+    imports: [FormsModule, MatIconModule]
 })
 export class ResetPasswordComponent implements OnInit {
 
