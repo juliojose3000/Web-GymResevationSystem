@@ -5,9 +5,10 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { ASSETS, Strings } from 'src/app/utils/resources';
 
 @Component({
-  selector: 'message-component',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.scss'],
+    selector: 'message-component',
+    templateUrl: './message.component.html',
+    styleUrls: ['./message.component.scss'],
+    standalone: false
 })
 export class MessageComponent implements OnInit {
   title: string;

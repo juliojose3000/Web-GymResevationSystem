@@ -14,7 +14,8 @@ import { SpinnerService } from 'src/app/common/spinner/spinner.service';
 @Component({
     selector: 'enable-disable-user.modal.component',
     templateUrl: './enable-disable-user.modal.component.html',
-    styleUrls: ['./enable-disable-user.modal.component.scss']
+    styleUrls: ['./enable-disable-user.modal.component.scss'],
+    standalone: false
 })
 export class EnableDisableUserModal implements OnInit {
 

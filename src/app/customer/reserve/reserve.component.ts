@@ -24,9 +24,10 @@ import { environment } from 'src/environments/environment';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
-  selector: 'app-reserve',
-  templateUrl: './reserve.component.html',
-  styleUrls: ['./reserve.component.scss'],
+    selector: 'app-reserve',
+    templateUrl: './reserve.component.html',
+    styleUrls: ['./reserve.component.scss'],
+    standalone: false
 })
 export class ReserveComponent implements OnInit {
   schedule: Schedule;

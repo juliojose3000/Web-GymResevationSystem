@@ -15,9 +15,10 @@ import { environment } from 'src/environments/environment';
 import { MessageComponent } from 'src/app/common/message/message.component';
 
 @Component({
-  selector: 'enter-phone-number-popup.component',
-  templateUrl: './enter-phone-number-popup.component.html',
-  styleUrls: ['./enter-phone-number-popup.component.scss'],
+    selector: 'enter-phone-number-popup.component',
+    templateUrl: './enter-phone-number-popup.component.html',
+    styleUrls: ['./enter-phone-number-popup.component.scss'],
+    standalone: false
 })
 export class EnterPhoneNumberPopupComponent implements OnInit {
   phone: number;

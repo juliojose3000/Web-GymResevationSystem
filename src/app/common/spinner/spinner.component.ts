@@ -2,9 +2,10 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { SpinnerService } from './spinner.service';
 
 @Component({
-  selector: 'app-spinner',
-  templateUrl: './spinner.component.html',
-  styleUrls: ['./spinner.component.scss']
+    selector: 'app-spinner',
+    templateUrl: './spinner.component.html',
+    styleUrls: ['./spinner.component.scss'],
+    standalone: false
 })
 export class SpinnerComponent implements OnInit {
 

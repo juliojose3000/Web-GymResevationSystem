@@ -8,9 +8,10 @@ import { User } from 'src/app/model/user.model';
 import { Utils } from 'src/app/utils/utils';
 
 @Component({
-  selector: 'modal-component',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+    selector: 'modal-component',
+    templateUrl: './modal.component.html',
+    styleUrls: ['./modal.component.scss'],
+    standalone: false
 })
 export class ModalComponent implements OnInit {
 

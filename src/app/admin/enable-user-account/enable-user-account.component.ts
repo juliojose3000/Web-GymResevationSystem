@@ -7,9 +7,10 @@ import { SpinnerService } from '../../common/spinner/spinner.service';
 import { Utils } from '../../utils/utils';
 
 @Component({
-  selector: 'app-enable-user-account',
-  templateUrl: './enable-user-account.component.html',
-  styleUrls: ['./enable-user-account.component.scss']
+    selector: 'app-enable-user-account',
+    templateUrl: './enable-user-account.component.html',
+    styleUrls: ['./enable-user-account.component.scss'],
+    standalone: false
 })
 export class EnableUserAccountComponent implements OnInit {
 

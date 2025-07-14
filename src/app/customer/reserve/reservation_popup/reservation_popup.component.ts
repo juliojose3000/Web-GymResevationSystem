@@ -16,7 +16,8 @@ import { environment } from 'src/environments/environment';
 @Component({
     selector: 'reservation_popup-component',
     templateUrl: './reservation_popup.component.html',
-    styleUrls: ['./reservation_popup.component.scss']
+    styleUrls: ['./reservation_popup.component.scss'],
+    standalone: false
 })
 export class ReservationPopupComponent implements OnInit {
 

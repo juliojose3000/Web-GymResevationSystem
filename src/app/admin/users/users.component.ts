@@ -11,9 +11,10 @@ import { SeeUserReservationsModal } from './see-user-reservations-modal/see-user
 import { EnableDisableUserModal } from './enable-disable-user-modal/enable-disable-user.modal.component';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+    selector: 'app-users',
+    templateUrl: './users.component.html',
+    styleUrls: ['./users.component.scss'],
+    standalone: false
 })
 export class UsersComponent implements OnInit {
 

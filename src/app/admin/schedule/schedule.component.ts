@@ -12,9 +12,10 @@ import { Utils } from 'src/app/utils/utils';
 import { ModalComponent } from './modal/modal.component';
 
 @Component({
-  selector: 'app-schedule',
-  templateUrl: './schedule.component.html',
-  styleUrls: ['./schedule.component.scss']
+    selector: 'app-schedule',
+    templateUrl: './schedule.component.html',
+    styleUrls: ['./schedule.component.scss'],
+    standalone: false
 })
 export class ScheduleComponent implements OnInit {
 

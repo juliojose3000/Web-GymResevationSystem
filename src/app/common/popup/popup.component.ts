@@ -4,9 +4,10 @@ import { Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'popup-component',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss']
+    selector: 'popup-component',
+    templateUrl: './popup.component.html',
+    styleUrls: ['./popup.component.scss'],
+    standalone: false
 })
 export class PopupComponent implements OnInit {
 

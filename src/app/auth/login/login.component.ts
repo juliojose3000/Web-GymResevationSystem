@@ -26,9 +26,10 @@ import { Subscription } from 'rxjs';
 import { UserRoleEnum } from '../../model/enums/user-role.enum';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    standalone: false
 })
 export class LoginComponent implements OnInit {
   //For Sign Up
