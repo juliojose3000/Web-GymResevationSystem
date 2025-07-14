@@ -10,7 +10,7 @@ import { Utils } from '../../utils/utils';
     selector: 'app-enable-user-account',
     templateUrl: './enable-user-account.component.html',
     styleUrls: ['./enable-user-account.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class EnableUserAccountComponent implements OnInit {
 

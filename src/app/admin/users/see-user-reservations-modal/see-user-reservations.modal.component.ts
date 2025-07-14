@@ -11,7 +11,7 @@ import { Utils } from 'src/app/utils/utils';
     selector: 'see-user-reservations.modal-component',
     templateUrl: './see-user-reservations.modal.component.html',
     styleUrls: ['./see-user-reservations.modal.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class SeeUserReservationsModal implements OnInit {
 

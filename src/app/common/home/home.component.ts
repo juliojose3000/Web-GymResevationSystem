@@ -6,7 +6,7 @@ import { Utils } from 'src/app/utils/utils';
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class HomeComponent implements OnInit {
 

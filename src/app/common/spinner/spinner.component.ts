@@ -5,7 +5,7 @@ import { SpinnerService } from './spinner.service';
     selector: 'app-spinner',
     templateUrl: './spinner.component.html',
     styleUrls: ['./spinner.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class SpinnerComponent implements OnInit {
 

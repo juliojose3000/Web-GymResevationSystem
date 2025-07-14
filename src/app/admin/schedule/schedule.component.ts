@@ -15,7 +15,7 @@ import { ModalComponent } from './modal/modal.component';
     selector: 'app-schedule',
     templateUrl: './schedule.component.html',
     styleUrls: ['./schedule.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class ScheduleComponent implements OnInit {
 

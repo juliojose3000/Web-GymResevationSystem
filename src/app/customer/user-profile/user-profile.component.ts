@@ -9,13 +9,15 @@ import { ASSETS, CSS_CLASSES, Strings } from '../../utils/resources';
 import { UserService } from '../../service/user.service';
 import { SpinnerService } from '../../common/spinner/spinner.service';
 import { Utils } from '../../utils/utils';
-import { stringify } from 'querystring';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-user-profile',
     templateUrl: './user-profile.component.html',
     styleUrls: ['./user-profile.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [FormsModule, MatIconModule]
 })
 export class UserProfileComponent implements OnInit {
   public name: string;

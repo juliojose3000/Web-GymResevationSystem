@@ -45,8 +45,12 @@ import { Utils } from './utils/utils';
 import { DatePipe } from '@angular/common';
 
 //Social Login
-import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from '@abacritt/angularx-social-login';
 
 //Environments
 import { environment } from '../environments/environment';
@@ -56,26 +60,7 @@ import { ResetPasswordComponent } from './auth/reset-password/reset-password.com
 import { environment_variables } from 'src/environments/environment.variables';
 import { AdminGuard } from './guards/admin.guard';
 
-@NgModule({ declarations: [
-        AppComponent,
-        //Screens components
-        ReserveComponent,
-        HomeComponent,
-        LoginComponent,
-        AboutusComponent,
-        UserProfileComponent,
-        PasswordForgottenComponent,
-        ResetPasswordComponent,
-        //Static components
-        HeaderComponent,
-        FooterComponent,
-        SpinnerComponent,
-        //Popups/Modals Components
-        ReservationPopupComponent,
-        PopupComponent,
-        MessageComponent,
-        EnterPhoneNumberPopupComponent
-    ],
+@NgModule({ declarations: [],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,

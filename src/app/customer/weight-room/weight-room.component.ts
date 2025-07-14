@@ -7,7 +7,7 @@ import { Utils } from '../../utils/utils';
     selector: 'app-weight-room',
     templateUrl: './weight-room.component.html',
     styleUrls: ['./weight-room.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class WeightRoomComponent implements OnInit {
 

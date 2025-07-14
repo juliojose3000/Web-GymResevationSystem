@@ -11,7 +11,7 @@ import { Utils } from 'src/app/utils/utils';
     selector: 'modal-component',
     templateUrl: './modal.component.html',
     styleUrls: ['./modal.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class ModalComponent implements OnInit {
 

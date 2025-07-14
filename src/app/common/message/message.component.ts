@@ -8,7 +8,7 @@ import { ASSETS, Strings } from 'src/app/utils/resources';
     selector: 'message-component',
     templateUrl: './message.component.html',
     styleUrls: ['./message.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class MessageComponent implements OnInit {
   title: string;

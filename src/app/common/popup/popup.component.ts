@@ -7,7 +7,7 @@ import { MatDialogRef } from '@angular/material/dialog';
     selector: 'popup-component',
     templateUrl: './popup.component.html',
     styleUrls: ['./popup.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class PopupComponent implements OnInit {
 

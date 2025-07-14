@@ -1,13 +1,22 @@
 import { LocationStrategy } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
+import { NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { Utils } from './utils/utils';
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component'
+import { SpinnerComponent } from './common/spinner/spinner.component';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [
+      HeaderComponent,
+      RouterOutlet,
+      FooterComponent,
+      SpinnerComponent
+    ],
 })
 export class AppComponent {
 
