@@ -1,35 +1,37 @@
 <div class="secondDiv">
 
-    <div class="divSearchBar">
+  <div class="divSearchBar">
 
-        <input type="text" id="searchBar" placeholder="Buscar cliente..." (keyup)="onKeyListener()">
+    <input type="text" id="searchBar" placeholder="Buscar cliente..." (keyup)="onKeyListener()">
 
-    </div>
+  </div>
 
-    <div class="scrollingTable">
-        <table id="customersTable">
-            <th class="colName">Nombre</th>
-            <th class="colPhone">Teléfono</th>
-            <th class="colEmail"> Email</th>
-            <th class="colRole">Rol</th>
-            <th class="colReservations">Reservaciones</th>
-            <th class="colStatus">Estado</th>
-            <tr *ngFor="let customer of searchedCustomers">
-                <td class="colName">{{ customer.name }}</td>
-                <td class="colPhone">{{ customer.phoneNumber }}</td>
-                <td class="colEmail">{{ customer.email }}</td>
-                <td class="colRole">{{ getRoleByCode(customer.role) }}</td>
-                <td class="colReservations">
-                    <button id="btnClose" mat-raised-button (click)="seeUserReservations(customer.id)">Ver</button>
-                </td>
-                <td class="colStatus">
-                    <button id="btnClose" mat-raised-button color="{{ customer.isEnabled?'primary':'warn' }}"
-                        (click)="activateOrInactivateUser(customer.id)">{{ isUserEnabled(customer.isEnabled) }}</button>
-                </td>
-            </tr>
+  <div class="scrollingTable">
+    <table id="customersTable">
+      <th class="colName">Nombre</th>
+      <th class="colPhone">Teléfono</th>
+      <th class="colEmail"> Email</th>
+      <th class="colRole">Rol</th>
+      <th class="colReservations">Reservaciones</th>
+      <th class="colStatus">Estado</th>
+      @for (customer of searchedCustomers; track customer) {
+        <tr>
+          <td class="colName">{{ customer.name }}</td>
+          <td class="colPhone">{{ customer.phoneNumber }}</td>
+          <td class="colEmail">{{ customer.email }}</td>
+          <td class="colRole">{{ getRoleByCode(customer.role) }}</td>
+          <td class="colReservations">
+            <button id="btnClose" mat-raised-button (click)="seeUserReservations(customer.id)">Ver</button>
+          </td>
+          <td class="colStatus">
+            <button id="btnClose" mat-raised-button color="{{ customer.isEnabled?'primary':'warn' }}"
+            (click)="activateOrInactivateUser(customer.id)">{{ isUserEnabled(customer.isEnabled) }}</button>
+          </td>
+        </tr>
+      }
 
-        </table>
+    </table>
 
-    </div>
+  </div>
 
 </div>
