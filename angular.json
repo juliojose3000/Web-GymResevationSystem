@@ -116,7 +116,6 @@
       }
     }
   },
-  "defaultProject": "dates-gym",
   "cli": {
     "analytics": false
   }
