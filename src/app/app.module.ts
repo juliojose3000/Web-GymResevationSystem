@@ -57,73 +57,64 @@ import { environment_variables } from 'src/environments/environment.variables';
 import { AdminGuard } from './guards/admin.guard';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-    //Screens components
-    ReserveComponent,
-    HomeComponent,
-    LoginComponent,
-    AboutusComponent,
-    UserProfileComponent,
-    PasswordForgottenComponent,
-    ResetPasswordComponent,
-
-    //Static components
-    HeaderComponent,
-    FooterComponent,
-    SpinnerComponent,
-
-    //Popups/Modals Components
-    ReservationPopupComponent,
-    PopupComponent,
-    MessageComponent,
-    EnterPhoneNumberPopupComponent
-
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FormsModule,
-    SocialLoginModule,
-    CommonModule,
-
-    //Material Imports
-    MatCardModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatTableModule,
-    MatInputModule,
-    MatRadioModule,
-    MatProgressSpinnerModule,
-    MatFormFieldModule,
-    MatIconModule
-  ],
-  providers: [ScheduleService, ReserveService, UserService, AuthenticationService, Utils, SpinnerService, DatePipe, AdminGuard,
-  
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: true,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(environment_variables.GooglePrividerId),
-          },
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider(`${environment.fb_id}`),
-          },
-
-        ],
-      } as SocialAuthServiceConfig,
-    }
-  
-  ],
-  bootstrap: [AppComponent],
-  entryComponents: [ReservationPopupComponent, MessageComponent, PopupComponent, EnterPhoneNumberPopupComponent]
+    declarations: [
+        AppComponent,
+        //Screens components
+        ReserveComponent,
+        HomeComponent,
+        LoginComponent,
+        AboutusComponent,
+        UserProfileComponent,
+        PasswordForgottenComponent,
+        ResetPasswordComponent,
+        //Static components
+        HeaderComponent,
+        FooterComponent,
+        SpinnerComponent,
+        //Popups/Modals Components
+        ReservationPopupComponent,
+        PopupComponent,
+        MessageComponent,
+        EnterPhoneNumberPopupComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule,
+        SocialLoginModule,
+        CommonModule,
+        //Material Imports
+        MatCardModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatTableModule,
+        MatInputModule,
+        MatRadioModule,
+        MatProgressSpinnerModule,
+        MatFormFieldModule,
+        MatIconModule
+    ],
+    providers: [ScheduleService, ReserveService, UserService, AuthenticationService, Utils, SpinnerService, DatePipe, AdminGuard,
+        {
+            provide: 'SocialAuthServiceConfig',
+            useValue: {
+                autoLogin: true,
+                providers: [
+                    {
+                        id: GoogleLoginProvider.PROVIDER_ID,
+                        provider: new GoogleLoginProvider(environment_variables.GooglePrividerId),
+                    },
+                    {
+                        id: FacebookLoginProvider.PROVIDER_ID,
+                        provider: new FacebookLoginProvider(`${environment.fb_id}`),
+                    },
+                ],
+            } as SocialAuthServiceConfig,
+        }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
