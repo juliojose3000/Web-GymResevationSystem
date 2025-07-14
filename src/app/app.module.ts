@@ -34,7 +34,7 @@ import { EnterPhoneNumberPopupComponent } from './auth/login/enter-phone-number-
 //Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -56,8 +56,7 @@ import { ResetPasswordComponent } from './auth/reset-password/reset-password.com
 import { environment_variables } from 'src/environments/environment.variables';
 import { AdminGuard } from './guards/admin.guard';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         //Screens components
         ReserveComponent,
@@ -77,11 +76,9 @@ import { AdminGuard } from './guards/admin.guard';
         MessageComponent,
         EnterPhoneNumberPopupComponent
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        HttpClientModule,
         FormsModule,
         SocialLoginModule,
         CommonModule,
@@ -95,9 +92,7 @@ import { AdminGuard } from './guards/admin.guard';
         MatRadioModule,
         MatProgressSpinnerModule,
         MatFormFieldModule,
-        MatIconModule
-    ],
-    providers: [ScheduleService, ReserveService, UserService, AuthenticationService, Utils, SpinnerService, DatePipe, AdminGuard,
+        MatIconModule], providers: [ScheduleService, ReserveService, UserService, AuthenticationService, Utils, SpinnerService, DatePipe, AdminGuard,
         {
             provide: 'SocialAuthServiceConfig',
             useValue: {
@@ -113,8 +108,5 @@ import { AdminGuard } from './guards/admin.guard';
                     },
                 ],
             } as SocialAuthServiceConfig,
-        }
-    ],
-    bootstrap: [AppComponent]
-})
+        }, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
