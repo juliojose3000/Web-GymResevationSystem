@@ -6,12 +6,19 @@ import { DatePipe } from '@angular/common';
 import { DAYS_NAME, MONTHS_NAME } from 'src/app/utils/resources';
 import { User } from 'src/app/model/user.model';
 import { Utils } from 'src/app/utils/utils';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'modal-component',
     templateUrl: './modal.component.html',
     styleUrls: ['./modal.component.scss'],
-    standalone: true
+    standalone: true,
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+    ]
+
 })
 export class ModalComponent implements OnInit {
 

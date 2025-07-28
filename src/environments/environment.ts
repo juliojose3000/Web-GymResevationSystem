@@ -1,4 +1,4 @@
-var localhost = "http://192.168.88.19:8080/gymcachi";
+var localhost = "http://localhost:8080/gymcachi";
 var azure = "https://gymdates.azurewebsites.net/gymcachi";
 var heroku = "https://gym-dates-backend.herokuapp.com/gymcachi";
 

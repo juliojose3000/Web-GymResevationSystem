@@ -16,6 +16,7 @@ import { MessageComponent } from 'src/app/common/message/message.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'enter-phone-number-popup.component',
@@ -26,7 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
       CommonModule,
       FormsModule, // ✅ NECESARIO PARA [(ngModel)]
       MatDialogModule,
-      MessageComponent
+      MatButtonModule,
     ]
 })
 export class EnterPhoneNumberPopupComponent implements OnInit {

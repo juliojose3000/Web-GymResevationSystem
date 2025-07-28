@@ -2,13 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { ASSETS, Strings } from 'src/app/utils/resources';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'message-component',
     templateUrl: './message.component.html',
     styleUrls: ['./message.component.scss'],
-    standalone: true
+    standalone: true,
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+    ]
 })
 export class MessageComponent implements OnInit {
   title: string;
