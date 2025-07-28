@@ -12,12 +12,18 @@ import { SpinnerService } from '../../../common/spinner/spinner.service';
 import { Utils } from '../../../utils/utils';
 import { DatePipe } from '@angular/common';
 import { environment } from 'src/environments/environment';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'reservation_popup-component',
     templateUrl: './reservation_popup.component.html',
     styleUrls: ['./reservation_popup.component.scss'],
-    standalone: true
+    standalone: true,
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+    ]
 })
 export class ReservationPopupComponent implements OnInit {
 

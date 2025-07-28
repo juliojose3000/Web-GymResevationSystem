@@ -31,8 +31,6 @@ import { MatIconModule } from '@angular/material/icon';
     standalone: true,
     imports: [
       FormsModule,
-      HeaderComponent,
-      EnterPhoneNumberPopupComponent,
       MatIconModule
     ] 
 })

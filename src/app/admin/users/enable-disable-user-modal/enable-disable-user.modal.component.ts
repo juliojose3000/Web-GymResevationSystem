@@ -10,12 +10,18 @@ import { UserService } from 'src/app/service/user.service';
 import { MyResponse } from 'src/app/model/myresponse.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { SpinnerService } from 'src/app/common/spinner/spinner.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'enable-disable-user.modal.component',
     templateUrl: './enable-disable-user.modal.component.html',
     styleUrls: ['./enable-disable-user.modal.component.scss'],
-    standalone: true
+    standalone: true,
+    imports: [
+        MatDialogModule,
+        MatButtonModule,
+    ]
 })
 export class EnableDisableUserModal implements OnInit {
 
